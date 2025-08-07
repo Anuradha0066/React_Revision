@@ -1,14 +1,13 @@
 import React from 'react'
-import './Day10.css'
-const ApiDataStore = ({input}) => {
+
+const Cart = ({cartData}) => {
   return (
     <div>
-       <div id='one'>
+      <div id='one'>
    {
-     input.map((data)=>{
+     cartData.map((data,index)=>{
         return (
        <div id='two' >
-        <button>add</button>
        <h5>{data.id }- {data.name}</h5>
        
        <img src={data.image} ></img>
@@ -23,4 +22,4 @@ const ApiDataStore = ({input}) => {
   )
 }
 
-export default ApiDataStore
+export default Cart

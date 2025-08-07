@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
-import ApiDataStore from './ApiDataStore'
+import ApiDataShow from './ApiDataShow'
+import { Link } from 'react-router-dom'
 
-const Day10 = () => {
-    let [input,SetInput]=useState([])
-
+const Day10 = ({input,SetInput,cartData,SetCartData}) => {
+ 
+    
     useEffect(()=>{
         fetch(`https://dummyjson.com/recipes`).then((res)=>{
             return res.json()
         }).then((data)=>{
             SetInput(data.recipes)
-            console.log(data);
+            console.log(data.recipes,"apiiiii");
             
         })
-    },[])
+    })
 
   return (
    <div>
-    <ApiDataStore input={input}/>
+    <Link to={'/cart'}>
+    <button>cart</button>
+    </Link>
+    <ApiDataShow input={input} cartData={cartData}  />
    </div>
   )
 }
