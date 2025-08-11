@@ -19,6 +19,17 @@ else if(action.type=="addToCart"){
        cartData: [...state.cartData, action.payload]
     }
 }
+else if(action.type=="del"){
+    return{
+        ...state,
+        cartData:state.cartData.filter((data,key)=>{
+            return key!==action.payload
+        })
+    }
+}
+else{
+    return state
+}
 }
 const ContextP = ({children}) => {
     const[state,dispatch]=useReducer(reducer,initialData)

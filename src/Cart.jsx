@@ -1,17 +1,20 @@
 import React,{useContext} from 'react'
 import {Context} from './Context'
+
 const Cart = () => {
     let   {state,dispatch}= useContext(Context)
 
     console.log(state.cartData,"mai hu don");
     
   return (
-    <div>
-      {state.cartData.map((a)=>{
+    <div id='one'>
+      {state.cartData.map((a,index)=>{
         return(
-          <div>
-            <h2>{a.name}</h2>
-            <img src={a.image} height='100px'></img>
+          <div id='two'>
+            
+            <img src={a.image} ></img>
+            <p>{a.name}</p>
+            <button onClick={()=>dispatch({type:"del",payload:index})}>delete</button>
            
            
             </div>
