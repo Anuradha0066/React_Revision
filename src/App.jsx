@@ -122,29 +122,48 @@
 
 // export default App
 
-import React, { useState } from 'react'
-import Todo_Reducer from './Todo_Reducer'
-import Day9 from './Day9'
-import Day10 from './Day10'
-import Day10Cus from './Day10Cus'
-import {Route,Routes} from 'react-router-dom'
-import Cart from './Cart'
-const App = () => {
-let[input,SetInput]=useState([])
-  let[cartData,SetCartData]=useState([])
-  console.log(input,"appp");
+// import React, { useState } from 'react'
+// import Todo_Reducer from './Todo_Reducer'
+// import Day9 from './Day9'
+// import Day10 from './Day10'
+// import Day10Cus from './Day10Cus'
+// import {Route,Routes} from 'react-router-dom'
+// import Cart from './Cart'
+// const App = () => {
+// let[input,SetInput]=useState([])
+//   let[cartData,SetCartData]=useState([])
+//   console.log(input,"appp");
   
+//   return (
+//     <div>
+//       {/* <Todo_Reducer/> */}
+//       {/* <Day9/> */}
+//       <Routes>
+//         <Route path='/cart' element={<Cart cartData={cartData}></Cart>}></Route>
+//        <Route path='/' element={<Day10 input={input} cartData={cartData} SetCartData={SetCartData} SetInput={SetInput}/>}></Route>
+
+//       </Routes>
+//       <Day10/>
+//       {/* <Day10Cus/> */}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import Routing from './Routing'
+import R_userDetails from './R_userDetails'
+import { Route,Routes } from 'react-router-dom'
+const App = () => {
   return (
     <div>
-      {/* <Todo_Reducer/> */}
-      {/* <Day9/> */}
       <Routes>
-        <Route path='/cart' element={<Cart cartData={cartData}></Cart>}></Route>
-       <Route path='/' element={<Day10 input={input} cartData={cartData} SetCartData={SetCartData} SetInput={SetInput}/>}></Route>
-
+        <Route path='/' element={<Routing/>}></Route>
+        <Route path='/user/:id' element={ <R_userDetails/>}></Route>
       </Routes>
-      <Day10/>
-      {/* <Day10Cus/> */}
+    
     </div>
   )
 }
