@@ -12,15 +12,14 @@ console.log(input,"kyuuuu");
   }
   return (
     <div>
-       <div id='one'>
+       <div id='one'> 
    {
      input.map((a,index)=>{
         return (
           <div>
        <div id='two' >
        <h5>{a.id }- {a.name}</h5>
-       
-    
+       <img src='a.image'></img>
        </div>
        </div>
         )
