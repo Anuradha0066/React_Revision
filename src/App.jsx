@@ -152,18 +152,34 @@
 // export default App
 
 
+// import React from 'react'
+// import Routing from './Routing'
+// import R_userDetails from './R_userDetails'
+// import { Route,Routes } from 'react-router-dom'
+// const App = () => {
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path='/' element={<Routing/>}></Route>
+//         <Route path='/user/:id' element={ <R_userDetails/>}></Route>
+//       </Routes>
+    
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import Routing from './Routing'
-import R_userDetails from './R_userDetails'
-import { Route,Routes } from 'react-router-dom'
+import Usememo from './Usememo'
+import MemoFunc from './MemoFunc'
+
 const App = () => {
   return (
     <div>
-      <Routes>
-        <Route path='/' element={<Routing/>}></Route>
-        <Route path='/user/:id' element={ <R_userDetails/>}></Route>
-      </Routes>
-    
+      {/* <Usememo/> */}
+      <MemoFunc/>
     </div>
   )
 }
