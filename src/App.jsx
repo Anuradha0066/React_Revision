@@ -174,12 +174,16 @@
 import React from 'react'
 import Usememo from './Usememo'
 import MemoFunc from './MemoFunc'
+import UseRef from './UseRef'
+import LazyLoading from './LazyLoading'
 
 const App = () => {
   return (
     <div>
       {/* <Usememo/> */}
-      <MemoFunc/>
+      {/* <MemoFunc/> */}
+      {/* <UseRef/> */}
+      <LazyLoading/>
     </div>
   )
 }
