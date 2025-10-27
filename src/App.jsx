@@ -171,21 +171,46 @@
 // export default App
 
 
+// import React from 'react'
+// import Usememo from './Usememo'
+// import MemoFunc from './MemoFunc'
+// import UseRef from './UseRef'
+// import LazyLoading from './LazyLoading'
+
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <Usememo/> */}
+//       {/* <MemoFunc/> */}
+//       {/* <UseRef/> */}
+//       <LazyLoading/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import Usememo from './Usememo'
-import MemoFunc from './MemoFunc'
-import UseRef from './UseRef'
-import LazyLoading from './LazyLoading'
+import SignUp from './SignUp'
+import Login from './Login'
+import Forget from './forget'
+import Reset from './Reset'
+import { Route,Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
-      {/* <Usememo/> */}
-      {/* <MemoFunc/> */}
-      {/* <UseRef/> */}
-      <LazyLoading/>
+      <Routes>
+        <Route path='/home' element={<h1>Home</h1>}></Route>
+        <Route path='/' element={<SignUp/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/forget' element={<Forget/>}></Route>
+        <Route path='/reset' element={<Reset/>}></Route>
+      </Routes>
     </div>
   )
 }
 
 export default App
+
